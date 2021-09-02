@@ -155,7 +155,7 @@ function playerOneLivesChange() {
                 image(damage, width-1199,15,30,30);
                 image(damage, width-1168,15,30,30);
                 image(damage, width-1137,15,30,30);
-                image(damage, width-946,15,30,30);
+                image(damage, width-1106,15,30,30);
             } else {
                 text("There was an error", width-820,30);
             }
