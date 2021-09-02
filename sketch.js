@@ -153,7 +153,7 @@ rabbitWalkingSound.src = "assets/sounds/rabbit4.mp3";
 
 
 function setup() {  
-    createCanvas(1366, 633);
+    createCanvas(1366, 600);
 
     textAlign(CENTER, CENTER);
 
