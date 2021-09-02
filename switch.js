@@ -115,46 +115,46 @@ function checkPlayerLives() {
 function playerOneLivesChange() {
     switch (playerOneLives) {
         case 5:
-            image(heart, width-1070,15,30,30);
-            image(heart, width-1039,15,30,30);
-            image(heart, width-1008,15,30,30);
-            image(heart, width-977,15,30,30);
-            image(heart, width-946,15,30,30);
+            image(heart, width-1230,15,30,30);
+            image(heart, width-1199,15,30,30);
+            image(heart, width-1168,15,30,30);
+            image(heart, width-1137,15,30,30);
+            image(heart, width-1106,15,30,30);
             break;
         case 4:
-            image(heart, width-1070,15,30,30);
-            image(heart, width-1039,15,30,30);
-            image(heart, width-1008,15,30,30);
-            image(heart, width-977,15,30,30);
-            image(damage, width-946,15,30,30);
+            image(heart, width-1230,15,30,30);
+            image(heart, width-1199,15,30,30);
+            image(heart, width-1168,15,30,30);
+            image(heart, width-1137,15,30,30);
+            image(damage, width-1106,15,30,30);
             break;
         case 3:
-            image(heart, width-1070,15,30,30);
-            image(heart, width-1039,15,30,30);
-            image(heart, width-1008,15,30,30);
-            image(damage, width-977,15,30,30);
-            image(damage, width-946,15,30,30);
+            image(heart, width-1230,15,30,30);
+            image(heart, width-1199,15,30,30);
+            image(heart, width-1168,15,30,30);
+            image(damage, width-1137,15,30,30);
+            image(damage, width-1106,15,30,30);
             break;
         case 2:
-            image(heart, width-1070,15,30,30);
-            image(heart, width-1039,15,30,30);
-            image(damage, width-1008,15,30,30);
-            image(damage, width-977,15,30,30);
-            image(damage, width-946,15,30,30);
+            image(heart, width-1230,15,30,30);
+            image(heart, width-1199,15,30,30);
+            image(damage, width-1168,15,30,30);
+            image(damage, width-1137,15,30,30);
+            image(damage, width-1106,15,30,30);
             break;
         case 1:
-            image(heart, width-1070,15,30,30);
-            image(damage, width-1039,15,30,30);
-            image(damage, width-1008,15,30,30);
-            image(damage, width-977,15,30,30);
-            image(damage, width-946,15,30,30);
+            image(heart, width-1230,15,30,30);
+            image(damage, width-1199,15,30,30);
+            image(damage, width-1168,15,30,30);
+            image(damage, width-1137,15,30,30);
+            image(damage, width-1106,15,30,30);
             break;
         default:
             if (playerOneLives <= 0) {
-                image(damage, width-1070,15,30,30);
-                image(damage, width-1039,15,30,30);
-                image(damage, width-1008,15,30,30);
-                image(damage, width-977,15,30,30);
+                image(damage, width-1230,15,30,30);
+                image(damage, width-1199,15,30,30);
+                image(damage, width-1168,15,30,30);
+                image(damage, width-1137,15,30,30);
                 image(damage, width-946,15,30,30);
             } else {
                 text("There was an error", width-820,30);

@@ -153,7 +153,7 @@ rabbitWalkingSound.src = "assets/sounds/rabbit4.mp3";
 
 
 function setup() {  
-    createCanvas(1366, 600);
+    createCanvas(1366, 660);
 
     textAlign(CENTER, CENTER);
 
@@ -227,7 +227,7 @@ function draw() {
 function display() {
     fill(0);
     textSize(20);
-    text("Player One:", width-1130,30);
+    text("Player One:", width-1290,30);
     text("Player Two:", width-229,30);
     
     if (tidTæller <= 100) {
