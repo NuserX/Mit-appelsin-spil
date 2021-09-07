@@ -14,20 +14,13 @@ class Kurv {
         this.bred = bredde;
         this.dyb = dybde;
         this.speed = speed;
-        this.image = image;
-
-        
-
-
-    }   
-    
-    
- 
+        this.image = image;      
+    }      
 
     /* Tegner kurven. Her kan evt. sættes et billede ind i stedet
      */
     tegn = function() {
-        image(this.image, this.x, this.y, 100, 100);
+        image(this.image, this.x, this.y, this.dyb, this.bred);
     }
 
     /* Flytter kurvens position

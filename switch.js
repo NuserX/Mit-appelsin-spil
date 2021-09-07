@@ -1,3 +1,12 @@
+/*
+Alt hvad der er skrevet i denne fil (switch.js) er ting jeg mener,
+der kunne have været lavet på en bedre måde.
+
+Jeg har arbejdet på at løse nogle af funktionerne og switch-statementsne, 
+men er kun kommet frem til halve løsninger,
+der har ødelagt spillet på den ene eller anden måde.
+*/
+
 // Cutscenes
 function cutscene() {
     if (msgCounter === 0) {
@@ -52,7 +61,6 @@ function cutscene() {
 
 // Change background function
 function customFucntion() {            
-
         if (playerObsidianCounter >= 14) {
             background(0)
             if (msgCounter == 7) {
@@ -107,6 +115,19 @@ function checkPlayerLives() {
     } 
     if (playerTwoLives <= 0){
         playerTwo = null;
+    }
+}
+
+// Check who has the higest score
+function winner() {
+    if (scorePlayerOne > scorePlayerTwo) {
+        victor = "Player 1";
+        victorScore = scorePlayerOne;
+    } else if (scorePlayerOne < scorePlayerTwo) {
+        victor = "Player 2";
+        victorScore = scorePlayerTwo;
+    } else if (scorePlayerOne == scorePlayerTwo) {
+        winnerErrorMsg = true;
     }
 }
 
@@ -215,7 +236,7 @@ function playerTwoLivesChange() {
     }
 }
 
-// Different oranges skins
+// Different orange skins
 function appelsinerImages() {
     switch (ranNum) {
         case 1:
