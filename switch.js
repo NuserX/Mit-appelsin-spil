@@ -315,6 +315,7 @@ function playerOnePoints() {
         case 8:
             chickenWalkingSound1.play();
             playerIronCounter += 1;
+            scorePlayerOne += 1;
             break;
         case 9:
         case 10:
@@ -322,25 +323,30 @@ function playerOnePoints() {
         case 12:
             chickenDeathSound1.play();
             playerOneLives -= 1;
+            scorePlayerOne -= 1;
             break;
         
         case 21:
         case 22:
             chickenWalkingSound1.play();
             playerDiamondCounter += 1;
+            scorePlayerOne += 1;
             break;
         case 23:
         case 24:
         case 25:
             chickenWalkingSound1.play();
             playerObsidianCounter += 1;
+            scorePlayerOne += 1;
             break;
         case 99:
             chickenWalkingSound1.play();
             playerOnePickaxe = true;
+            scorePlayerOne += 1;
             break;
         case 100:
             playerOneBucket = true;
+            scorePlayerOne += 1;
             break;        
         default:
             chickenWalkingSound1.play();
@@ -355,6 +361,7 @@ function playerTwoPoints() {
         case 8:
             rabbitWalkingSound.play();
             playerIronCounter += 1;
+            scorePlayerTwo += 1;
             break;
         case 9:
         case 10:
@@ -362,23 +369,28 @@ function playerTwoPoints() {
         case 12:
             rabbitDeathSound1.play();
             playerTwoLives -= 1;
+            scorePlayerTwo -= 1;
             break;
         case 21:
         case 22:
             rabbitWalkingSound.play();
             playerDiamondCounter += 1;
+            scorePlayerTwo += 1;
             break;
         case 23:
         case 24:
         case 25:
             rabbitWalkingSound.play();
             playerObsidianCounter += 1;
+            scorePlayerTwo += 1;
         case 99:
             rabbitWalkingSound.play();
             playerTwoPickaxe = true;
+            scorePlayerTwo += 1;
             break;
         case 100:
             playerTwoBucket = true;
+            scorePlayerTwo += 1;
             break
         default:
             rabbitWalkingSound.play();
