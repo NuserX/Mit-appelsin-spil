@@ -323,7 +323,6 @@ function playerOnePoints() {
         case 12:
             chickenDeathSound1.play();
             playerOneLives -= 1;
-            scorePlayerOne -= 1;
             break;
         
         case 21:
@@ -369,7 +368,6 @@ function playerTwoPoints() {
         case 12:
             rabbitDeathSound1.play();
             playerTwoLives -= 1;
-            scorePlayerTwo -= 1;
             break;
         case 21:
         case 22:

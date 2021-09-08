@@ -68,6 +68,7 @@ let ranNum;
 // counter til "cutscenes"
 let msgCounter = 0;
 
+let missed = 0;
 
 
 // Player variabler
@@ -137,9 +138,11 @@ function preload() {
 }
 
 // Spiller lyde og baggrunds lyd
+/*
+Jeg blev desværre nødt til at cutte baggrunds musikken, da jeg ikke kan finde ud af at klippe lydfilen...
 const backgroundSound = new Audio();
 backgroundSound.src = "assets/sounds/minecraftTheme.mp3";
-
+*/
 const chickenDeathSound1 = new Audio();
 chickenDeathSound1.src = "assets/sounds/chicken1.mp3";
 
@@ -176,7 +179,8 @@ function draw() {
         // Her kalder jeg min "cutscene"-funktion (kan findes i switch.js) 
         cutscene();
         // Spiller min baggundsmusik
-        backgroundSound.play();
+        // Se linje 142
+        //backgroundSound.play();
         // msgCounter bliver brugt i cutscene funktionen
         if (msgCounter == 1 || msgCounter == 3 || msgCounter == 5 || msgCounter == 7) {
             // customFucntion bruges til at ændre baggrunden (kan findes i switch.js) 
@@ -276,9 +280,16 @@ function move() {
     }
     
     if (x > width || y > height) {
-        shootNew();
+        
         playerOneLives -= 1;
         playerTwoLives -= 1;
+        
+        if (ranNum == '9' || ranNum == '10' || ranNum == '11' || ranNum == '12') {
+            playerOneLives += 1;
+            playerTwoLives += 1;
+        } 
+        shootNew();  
+        
     }
     
 }
@@ -314,15 +325,24 @@ function shootNew() {
     y = random(0, 633);
 
     // Her ændre "appelsinens" hastighed sig alt efter hvor den spawner på y-aksen
-    if (y < 100) {
+    if (y <= 50) {
         yspeed = 0;
         xspeed = random(5,11);
-    } else if (y < 300 && y > 101) {
-        yspeed = -5;
-        xspeed = random (3,8);
-    } else if (y < 500 && y > 301) {
+    } else if (y <= 150 && y >= 51) {
+        yspeed = 1;
+        xspeed = random(7,13);
+    } else if (y <= 270 && y >= 151) {
+        yspeed = 0;
+        xspeed = random (5,11);
+    } else if (y <= 350 && y >= 271) {
         yspeed = -7.5;
         xspeed = random (8,10);
+    } else if (y <= 450 && y >=351) {
+        yspeed = -8.5;
+        xspeed = random (8,11);
+    } else if (y <= 490 && y >=451) {
+        yspeed = -9;
+        xspeed = random (5,11);
     } else {
         yspeed = -10;
         xspeed = random(1,8);
@@ -369,6 +389,12 @@ function keyPressed() {
 
 // Restart funktionen, der nulstiller alle variabler og tegner spillerne på deres start pladser
 function restart() {
+    
+    spilIgang = true;
+    winnerErrorMsg = false;
+    ranNum = 0;
+    missed = 0;
+
     x = 0; 
     y = 500;
     xspeed = 4;
@@ -392,12 +418,6 @@ function restart() {
     playerOneBucket = false;
     playerTwoBucket = false;
 
-    ranNum = 0;
-    spilIgang = true;
-    winnerErrorMsg = false;
-    msgCounter = 0;
-
-    playerOne = new Kurv(330, 380, 150, 50, 15, imgPlayerone);
-    playerTwo = new Kurv(850, 400, 150, 50, 15, imgPlayertwo);
-
+    playerOne = new Kurv(330, 380, 150, 150, 15, imgPlayerone);
+    playerTwo = new Kurv(850, 400, 150, 150, 15, imgPlayertwo);
 }

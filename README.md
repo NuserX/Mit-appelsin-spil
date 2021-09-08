@@ -9,7 +9,7 @@ Udseendet:
 (Alle billeder er fra Minecraft og hentet fra minecraft wiki url(https://minecraft.fandom.com/wiki/Minecraft_Wiki))
 
 Selve spillet:
-- Spillet har jeg ændret fra et single player, til et multiplayer spil.
+- Spillet har jeg ændret fra et single player, til et co-operativt multiplayer spil. Hvor det gælder om, i fællesskab, at samle de forskellige appelsiner og klare de forskellige objektives.
 
 - Derudover har jeg ændret "flowet" i spillet. Forstået på den måde, at førhen tabte man spillet ved at misse 3 frugter. Nu har jeg implimenteret liv, så når man misser en frugt taber begge spillere et liv og når man samler forkerte frugter op, mister man også et liv. Når begge spillere er døde stopper spillet. 
 
